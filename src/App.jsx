@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ClassForm from "./components/ClassForm";
@@ -8,7 +8,14 @@ import "./App.css";
 
 function App() {
   const [currentPage, setCurrentPage] = useState("home");
-  const [classes, setClasses] = useState([]);
+  const [classes, setClasses] = useState(() => {
+    const saved = localStorage.getItem("classes");
+    return saved ? JSON.parse(saved) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("classes", JSON.stringify(classes));
+  }, [classes]);
 
   const addClass = (newClass) => {
     setClasses([newClass, ...classes]);
