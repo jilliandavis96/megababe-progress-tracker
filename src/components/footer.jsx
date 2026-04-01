@@ -1,3 +1,4 @@
+// Footer displays at the bottom of every page
 function Footer() {
   return (
     <footer className="footer">

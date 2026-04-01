@@ -1,3 +1,4 @@
+// About page describes the app and its features
 function About() {
   return (
     <main className="about">
@@ -8,6 +9,7 @@ function About() {
         class you attend.
       </p>
       <h3>Features</h3>
+      {/* List of app features */}
       <ul>
         <li>Log your Lagree classes by date</li>
         <li>Track your total class count</li>
