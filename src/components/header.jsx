@@ -1,7 +1,9 @@
+// Header displays the app title and navigation buttons
 function Header({ currentPage, setCurrentPage }) {
   return (
     <header className="header">
-      <h1>🏋️‍♀️ Lagree Progress Tracker</h1>
+      <h1>🏋️‍♀️ Megababe Progress Tracker</h1>
+      {/* Nav buttons switch between Home and About pages using conditional rendering */}
       <nav>
         <button
           onClick={() => setCurrentPage("home")}
