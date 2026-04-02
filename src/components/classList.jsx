@@ -40,8 +40,13 @@ function ClassList({ classes, deleteClass }) {
   return (
     <section className="class-list">
       <h2>Your Classes</h2>
-      {/* Display total number of classes logged */}
-      <p className="class-count">Total Classes: {classes.length}</p>
+
+      {/* Heart counter badge */}
+      <div className="heart-counter">
+        <span className="heart-number">{classes.length}</span>
+        <span className="heart-label">Classes Completed</span>
+        {classes.length > 0 && <span className="heart-label">Way to go!</span>}
+      </div>
 
       {/* Only show streak if at least one class is logged */}
       {classes.length > 0 && (
