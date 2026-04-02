@@ -1,3 +1,5 @@
+import Button from "./Button";
+
 // ClassItem represents a single logged class entry
 function ClassItem({ classEntry, deleteClass }) {
   return (
@@ -13,10 +15,8 @@ function ClassItem({ classEntry, deleteClass }) {
         {/* Conditionally render note only if one was provided */}
         {classEntry.note && <p className="class-note">📝 {classEntry.note}</p>}
       </div>
-      {/* Call deleteClass with this entry's id when delete button is clicked */}
-      <button className="delete-btn" onClick={() => deleteClass(classEntry.id)}>
-        Delete
-      </button>
+      {/* Reusable Button component handles the delete action */}
+      <Button text="Delete" onClick={() => deleteClass(classEntry.id)} className="delete-btn" />
     </div>
   );
 }
