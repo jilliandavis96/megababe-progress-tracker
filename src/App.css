@@ -137,6 +137,13 @@ main {
   margin-bottom: 16px;
 }
 
+.streak {
+  font-size: 0.9rem;
+  color: #e75480;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
 .empty-message {
   color: #aaa;
   font-style: italic;
