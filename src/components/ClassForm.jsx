@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Button from "./Button";
 
 // ClassForm handles user input for logging a new class
 function ClassForm({ addClass }) {
@@ -60,7 +61,8 @@ function ClassForm({ addClass }) {
         />
         {/* Conditionally render error message if validation fails */}
         {error && <p className="error">{error}</p>}
-        <button type="submit">Log Class</button>
+        {/* Reusable Button component handles form submission */}
+        <Button type="submit" text="Log Class" className="log-btn" />
       </form>
     </section>
   );
