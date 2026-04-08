@@ -96,7 +96,7 @@ main {
   font-size: 1rem;
 }
 
-.class-form button {
+.log-btn {
   background-color: #e75480;
   color: white;
   border: none;
@@ -105,9 +105,10 @@ main {
   font-size: 1rem;
   cursor: pointer;
   margin-top: 8px;
+  width: 100%;
 }
 
-.class-form button:hover {
+.log-btn:hover {
   background-color: #c94070;
 }
 
