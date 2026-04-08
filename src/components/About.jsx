@@ -1,8 +1,15 @@
+import megaformer from "../assets/megaformer.png";
+
 // About page describes the app and its features
 function About() {
   return (
     <main className="about">
       <h2>About Megababe Progress Tracker</h2>
+      <img
+        src={megaformer}
+        alt="A megaformer machine used in Lagree fitness classes"
+        className="about-img"
+      />
       <p>
         Megababe Progress Tracker is a workout logging app built for Lagree
         fitness enthusiasts. It helps you stay consistent by tracking every
